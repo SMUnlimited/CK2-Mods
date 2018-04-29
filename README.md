@@ -1,6 +1,8 @@
 # CK2-Mods
 Personal Mods for Crusader Kings 2
 
+https://steamcommunity.com/id/strategymaster/myworkshopfiles/ 
+
 # Active Mods
 Kept up to date for ck2 versions 
 
