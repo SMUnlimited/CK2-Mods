@@ -1,0 +1,117 @@
+namespace = SMCommand
+
+character_event = {
+	id = SMCommand.2
+	is_triggered_only = yes
+	hide_window = yes
+	ai = no # Only for player lieges
+	
+	option = {
+		name = SMCommand.2.option
+		trigger = {
+			any_realm_character = {
+				NOT = { has_minor_title = title_commander }
+				NOT = { has_job_title = job_marshal }
+				can_hold_title = title_commander # Returns false if no titles available to give
+			}
+		}
+		random = {
+			chance = 25
+			job_marshal = {
+				PREV = {
+					random_realm_character = {
+						limit = {
+							is_friend = PREVPREV
+							NOT = { has_minor_title = title_commander }
+							NOT = { has_job_title = job_marshal }
+							can_hold_title = title_commander
+						}
+						log = "Commander Promoted, Marshals friend"
+						give_minor_title = title_commander
+						break = yes
+					}
+				}
+			}
+		}
+		random_realm_character = {
+			limit = {
+				martial = 30
+				NOT = { has_minor_title = title_commander }
+				NOT = { has_job_title = job_marshal }
+				can_hold_title = title_commander
+			}
+			log = "Commander Promoted 30"
+			give_minor_title = title_commander
+			break = yes
+		}
+		random_realm_character = {
+			limit = {
+				martial = 20
+				NOT = { has_minor_title = title_commander }
+				NOT = { has_job_title = job_marshal }
+				can_hold_title = title_commander
+			}
+			log = "Commander Promoted 20"
+			give_minor_title = title_commander
+			break = yes
+		}
+		random_realm_character = {
+			limit = {
+				martial = 15
+				NOT = { has_minor_title = title_commander }
+				NOT = { has_job_title = job_marshal }
+				can_hold_title = title_commander
+			}
+			log = "Commander Promoted 15"
+			give_minor_title = title_commander
+			break = yes
+		}
+		random_realm_character = {
+			limit = {
+				martial = 9
+				NOT = { has_minor_title = title_commander }
+				NOT = { has_job_title = job_marshal }
+				can_hold_title = title_commander
+			}
+			log = "Commander Promoted 9"
+			give_minor_title = title_commander
+			break = yes
+		}
+		random_realm_character = {
+			limit = {
+				NOT = { has_minor_title = title_commander }
+				NOT = { has_job_title = job_marshal }
+				can_hold_title = title_commander
+			}
+			log = "Commander Bad Promoted"
+			give_minor_title = title_commander
+		}
+	}
+	
+}
+
+character_event = {
+	id = SMCommand.1
+	is_triggered_only = yes
+	hide_window = yes
+	ai = yes
+	
+	trigger = {
+		has_minor_title = title_commander
+		liege = {
+			ai = no
+		}
+	}
+	
+	immediate = {
+		log = "Commander died"
+		remove_title = title_commander
+		liege = {
+			character_event = { id = SMCommand.2 days = 1 }
+		}
+	}
+	
+	option = {
+		name = SMCommand.1.option	
+	}
+}

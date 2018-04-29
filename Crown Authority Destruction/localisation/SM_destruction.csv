@@ -1,0 +1,25 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+SMKingdom.1.title;An Empire has fallen;;;;;;;;;;;;;x
+SMKingdom.1.desc;The vassals lead by [Root.GetTitledName] have broken away from the empire and declared that [From.GetTitledName] no longer has any authority or power over them;;;;;;;;;;;;;x
+SMKingdom.1.option;They will regret this!;;;;;;;;;;;;;x
+SMKingdom.1.option2;Interesting...;;;;;;;;;;;;;x
+SMKingdom.2.title;A Kingdom has fallen;;;;;;;;;;;;;x
+SMKingdom.2.desc;The vassals lead by [Root.GetTitledName] have broken away from the kingdom and declared that [From.GetTitledName] no longer has any authority or power over them;;;;;;;;;;;;;x
+SMKingdom.2.option;They will regret this!;;;;;;;;;;;;;x
+SMKingdom.2.option2;Interesting...;;;;;;;;;;;;;x
+SMKingdom.1.CBdesc;The vassals lead by [From.GetTitledName] have broken away from the empire and declared that [Root.GetTitledName] no longer has any authority or power over them;;;;;;;;;;;;;x
+SMKingdom.2.CBdesc;The vassals lead by [From.GetTitledName] have broken away from the kingdom and declared that [Root.GetTitledName] no longer has any authority or power over them;;;;;;;;;;;;;x
+SM_lower_crown_authority_law_desc;§Y$CLAIMANT$§! can declare war to lower Crown Authority in the §Y$TITLE$§!;Le(la) §Y$CLAIMANT$§! peut déclarer la guerre pour affaiblir l’autorité de la Couronne du(de la) §Y$TITLE$§!;§Y$CLAIMANT$§! kann einen Krieg zur Reduzierung der Kronenautorität in §Y$TITLE$§! erklären;;§Y$CLAIMANT$§! puede declarar la guerra para reducir la autoridad de la Corona en el §Y$TITLE$§!;;;;;;;;;x
+SM_lower_crown_authority_title;Lower crown authority;;;;;;;;;;;;;x
+faction_SM_lower_crown_authority_short;Lower Crown Authority;Diminuer l'autorité de la couronne;Schwächere Kronenherrschaft;;Reducir la autoridad de la Corona;;;;;;;;;x
+faction_SM_lower_crown_authority_title;Lower Crown Authority in [This.GetName];Diminuer l'autorité de la couronne à [This.GetName] ;Schwächere Kronenherrschaft in [This.GetName];;Reducir la autoridad de la Corona en [This.GetName];;;;;;;;;x
+faction_SM_lower_crown_authority_desc;Members seek to lower the Crown Authority in [This.GetName]. When sufficiently powerful, §Y[From.GetBestName]§! may present an ultimatum to §Y[From.Liege.GetBestName]§!.;Les membres d'une faction cherchent à diminuer l'autorité de la couronne à [This.GetName]. Une fois son soutien assuré, §Y[From.GetBestName]§! pourra lancer un ultimatum à §Y[From.Liege.GetBestName]§!.;Mitglieder streben die Einführung einer schwächeren Kronenherrschaft in [This.GetName] an. Sobald §Y[From.GetBestName]§! mächtig genug ist, könnte §Y[From.Liege.GetBestName]§! ein Ultimatum gestellt werden.;;Pretenden reducir la autoridad de la Corona en [This.GetName]. Cuando sean suficientemente poderosos, §Y[From.GetBestName]§! podrá enviar un ultimátum a §Y[From.Liege.GetBestName]§!.;;;;;;;;;x
+faction_SM_lower_crown_authority_ultimatum;Demand Lower Crown Authority;Demande de diminution de l'autorité de la couronne;Schwächere Kronenherrschaft fordern;;Reclamar la reducción de la autoridad de la Corona;;;;;;;;;x
+faction_SM_lower_crown_authority_ultimatum_desc;Present an ultimatum to §Y[Root.Liege.GetBestName]§!, demanding lower Crown Authority. If [Root.Liege.GetSubjectPronoun] refuses to comply, your Faction will rise in revolt.;Présentez un ultimatum à §Y[Root.Liege.GetBestName]§! pour exiger une diminution de l'autorité de la couronne. Si [Root.Liege.GetSubjectPronoun] refuse votre requête, votre faction prendra alors les armes.;Stellt §Y[Root.Liege.GetBestName]§! ein Ultimatum und fordert eine schwächere Kronenherrschaft. Sollte [Root.Liege.GetSubjectPronoun] dies ablehnen, wird Eure Fraktion einen Aufstand anzetteln.;;Enviar un ultimátum a §Y[Root.Liege.GetBestName]§!, reclamando la reducción de la autoridad de la Corona. Si [Root.Liege.GetSubjectPronoun] se niega a concederla, tu Facción se sublevará.;;;;;;;;;x
+SMFactionLoseVassals;A number of your vassals may declare their independence.\n;;;;;;;;;;;;;x
+SMKingdom.12.title;The realm collapses;;;;;;;;;;;;;x
+SMKingdom.12.desc; A major vassal revolt has overthrown your authority and has caused mayham within the [Root.PrimaryTitle.GetFullName]. Small localized revolts continue and even now the council still cannot agree with each other on the future of the realm. The realm has truly devolved and the council finally declare the title no longer exists.;;;;;;;;;;;;;x
+SMKingdom.12.option;They will regret this!;;;;;;;;;;;;;x
+SMKingdom.13.title;The council takes control;;;;;;;;;;;;;x
+SMKingdom.13.desc; A major vassal revolt has overthrown your authority within the [Root.PrimaryTitle.GetFullName]. The council will now decide whether to share the realm out between your vassals to return confidence in your rule;;;;;;;;;;;;;x
+SMKingdom.13.option;How insulting!;;;;;;;;;;;;;x

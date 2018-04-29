@@ -1,0 +1,472 @@
+targetted_decisions = {
+
+	fund_councillor = {
+	  only_rulers = yes
+	  filter = realm #Filter characters targetted by the player
+	  ai_target_filter = self #Filter for characters targetted by the AI
+	  from_potential = {
+		ai = no
+	  }
+	  potential = {
+		is_councillor = yes
+		liege = {
+			character = FROM
+		}
+	  }
+	  allow = {
+		is_incapable = no
+		FROM = {
+			is_incapable = no
+		}
+		custom_tooltip = {
+			text = fund_councillor_notfunded
+			NOT = { has_character_flag = job_funded }
+		}
+		custom_tooltip = {
+			text = fund_councillor_money
+			OR = {
+				AND = {
+					has_job_title = job_chancellor
+					OR = {
+						AND = {
+							diplomacy = 20
+							FROM = {
+								wealth = 500
+							}
+						}
+						AND = {
+							diplomacy = 15
+							FROM = {
+								wealth = 750
+							}
+						}
+						AND = {
+							diplomacy = 10
+							FROM = {
+								wealth = 1000
+							}
+						}
+						AND = {
+							diplomacy = 5
+							FROM = {
+								wealth = 1500
+							}
+						}
+						AND = {
+							diplomacy = 0
+							FROM = {
+								wealth = 2000
+							}
+						}	
+					}
+				}
+				AND = {
+					has_job_title = job_marshal
+					OR = {
+						AND = {
+							martial = 20
+							FROM = {
+								wealth = 500
+							}
+						}
+						AND = {
+							martial = 15
+							FROM = {
+								wealth = 750
+							}
+						}
+						AND = {
+							martial = 10
+							FROM = {
+								wealth = 1000
+							}
+						}
+						AND = {
+							martial = 5
+							FROM = {
+								wealth = 1500
+							}
+						}
+						AND = {
+							martial = 0
+							FROM = {
+								wealth = 2000
+							}
+						}	
+					}
+				}
+				AND = {
+					has_job_title = job_treasurer
+					OR = {
+						AND = {
+							stewardship = 20
+							FROM = {
+								wealth = 500
+							}
+						}
+						AND = {
+							stewardship = 15
+							FROM = {
+								wealth = 750
+							}
+						}
+						AND = {
+							stewardship = 10
+							FROM = {
+								wealth = 1000
+							}
+						}
+						AND = {
+							stewardship = 5
+							FROM = {
+								wealth = 1500
+							}
+						}
+						AND = {
+							stewardship = 0
+							FROM = {
+								wealth = 2000
+							}
+						}	
+					}
+				}
+				AND = {
+					has_job_title = job_spymaster
+					OR = {
+						AND = {
+							intrigue = 20
+							FROM = {
+								wealth = 500
+							}
+						}
+						AND = {
+							intrigue = 15
+							FROM = {
+								wealth = 750
+							}
+						}
+						AND = {
+							intrigue = 10
+							FROM = {
+								wealth = 1000
+							}
+						}
+						AND = {
+							intrigue = 5
+							FROM = {
+								wealth = 1500
+							}
+						}
+						AND = {
+							intrigue = 0
+							FROM = {
+								wealth = 2000
+							}
+						}	
+					}
+				}
+				AND = {
+					has_job_title = job_spiritual
+					OR = {
+						AND = {
+							learning = 20
+							FROM = {
+								wealth = 500
+							}
+						}
+						AND = {
+							learning = 15
+							FROM = {
+								wealth = 750
+							}
+						}
+						AND = {
+							learning = 10
+							FROM = {
+								wealth = 1000
+							}
+						}
+						AND = {
+							learning = 5
+							FROM = {
+								wealth = 1500
+							}
+						}
+						AND = {
+							learning = 0
+							FROM = {
+								wealth = 2000
+							}
+						}	
+					}
+				}
+			}
+		}
+	  }
+	  effect = {
+		set_character_flag = job_funded
+		if = {
+			limit = {
+				has_job_title = job_chancellor
+			}
+			if = {
+				limit = {
+					diplomacy = 20
+				}
+				FROM = {
+					wealth = -500
+				}
+				break = yes
+			}
+			if = {
+				limit = {
+					diplomacy = 15
+				}
+				FROM = {
+					wealth = -750
+				}
+				break = yes
+			}
+			if = {
+				limit = {
+					diplomacy = 10
+				}
+				FROM = {
+					wealth = -1000
+				}
+				break = yes
+			}
+			if = {
+				limit = {
+					diplomacy = 5
+				}
+				FROM = {
+					wealth = -1500
+				}
+				break = yes
+			}
+			if = {
+				limit = {
+					diplomacy = 0
+				}
+				FROM = {
+					wealth = -2000
+				}
+				break = yes
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				has_job_title = job_marshal
+			}
+			if = {
+				limit = {
+					martial = 20
+				}
+				FROM = {
+					wealth = -500
+				}
+				break = yes
+			}
+			if = {
+				limit = {
+					martial = 15
+				}
+				FROM = {
+					wealth = -750
+				}
+				break = yes
+			}
+			if = {
+				limit = {
+					martial = 10
+				}
+				FROM = {
+					wealth = -1000
+				}
+				break = yes
+			}
+			if = {
+				limit = {
+					martial = 5
+				}
+				FROM = {
+					wealth = -1500
+				}
+				break = yes
+			}
+			if = {
+				limit = {
+					martial = 0
+				}
+				FROM = {
+					wealth = -2000
+				}
+				break = yes
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				has_job_title = job_treasurer
+			}
+			if = {
+				limit = {
+					stewardship = 20
+				}
+				FROM = {
+					wealth = -500
+				}
+				break = yes
+			}
+			if = {
+				limit = {
+					stewardship = 15
+				}
+				FROM = {
+					wealth = -750
+				}
+				break = yes
+			}
+			if = {
+				limit = {
+					stewardship = 10
+				}
+				FROM = {
+					wealth = -1000
+				}
+				break = yes
+			}
+			if = {
+				limit = {
+					stewardship = 5
+				}
+				FROM = {
+					wealth = -1500
+				}
+				break = yes
+			}
+			if = {
+				limit = {
+					stewardship = 0
+				}
+				FROM = {
+					wealth = -2000
+				}
+				break = yes
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				has_job_title = job_spymaster
+			}
+			if = {
+				limit = {
+					intrigue = 20
+				}
+				FROM = {
+					wealth = -500
+				}
+				break = yes
+			}
+			if = {
+				limit = {
+					intrigue = 15
+				}
+				FROM = {
+					wealth = -750
+				}
+				break = yes
+			}
+			if = {
+				limit = {
+					intrigue = 10
+				}
+				FROM = {
+					wealth = -1000
+				}
+				break = yes
+			}
+			if = {
+				limit = {
+					intrigue = 5
+				}
+				FROM = {
+					wealth = -1500
+				}
+				break = yes
+			}
+			if = {
+				limit = {
+					intrigue = 0
+				}
+				FROM = {
+					wealth = -2000
+				}
+				break = yes
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				has_job_title = job_spiritual
+			}
+			if = {
+				limit = {
+					learning = 20
+				}
+				FROM = {
+					wealth = -500
+				}
+				break = yes
+			}
+			if = {
+				limit = {
+					learning = 15
+				}
+				FROM = {
+					wealth = -750
+				}
+				break = yes
+			}
+			if = {
+				limit = {
+					learning = 10
+				}
+				FROM = {
+					wealth = -1000
+				}
+				break = yes
+			}
+			if = {
+				limit = {
+					learning = 5
+				}
+				FROM = {
+					wealth = -1500
+				}
+				break = yes
+			}
+			if = {
+				limit = {
+					learning = 0
+				}
+				FROM = {
+					wealth = -2000
+				}
+				break = yes
+			}
+		}
+	  }
+	  revoke_allowed = {
+		always = no #Not used in vanilla
+	  }
+	  ai_will_do = {
+		factor = 0
+	  }
+	 
+	}
+
+}

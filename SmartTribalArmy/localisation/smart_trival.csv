@@ -1,0 +1,11 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+SM_SMART_TRIBAL_RULE;Smart Tribal Armies;;;;;;;;;;;;;x
+SM_SMART_TRIBAL_DESC;Configure the AI and number of troops for raising tribal armies;;;;;;;;;;;;;x
+SM_SMART_DEFAULT;Default;;;;;;;;;;;;;x
+SM_SMART_DEFAULT_DESC;Standard vanilla behaviour AI will use tribal army decisions when necessary;;;;;;;;;;;;;x
+SM_SMART_BALANCED;Balanced;;;;;;;;;;;;;x
+SM_SMART_BALANCED_DESC;AI will use tribal army decisions and tribal armies will be smaller;;;;;;;;;;;;;x
+SM_SMART_CRAZY;Crazy;;;;;;;;;;;;;x
+SM_SMART_CRAZY_DESC;WARNING tribal armies will be overpowered!;;;;;;;;;;;;;x
+SM_SMART_OFF;Off;;;;;;;;;;;;;x
+SM_SMART_OFF_DESC;AI will not use the tribal army decisions at all;;;;;;;;;;;;;x

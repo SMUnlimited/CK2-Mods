@@ -1,0 +1,10 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_pillage_all"
+		texturefile = "gfx\\interface\\decision_icon_extort_subjects.dds"
+	}
+	spriteType = {
+		name = "GFX_pillage_war"
+		texturefile = "gfx\\interface\\decision_icon_extort_subjects.dds"
+	}
+}

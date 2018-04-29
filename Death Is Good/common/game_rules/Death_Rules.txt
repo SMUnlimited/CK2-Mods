@@ -1,0 +1,44 @@
+#
+# List of options showing in the Game Rules screen
+#
+# format is:
+# rule_token = {
+#	name = "TEXT_KEY_FOR_NAME"
+#	desc = "TEXT_KEY_FOR_LONG_DESC"
+#	group = "TEXT_KEY_FOR_GROUP"					# Used for filtering. A single rule can be in multiple groups 
+#	option = {										# please note that the first option is always the default option
+#		name = option_token
+#		text = "TEXT_KEY_FOR_OPTION_NAME"
+#		achievements = no							# by default achievements = yes, allows or disallows achievements
+#	}
+# }
+
+
+death_rule = {
+	name = "SM_DEATH_RULE"
+	option = {
+		name = normal
+		text = SM_DEATH_RULE_NORMAL
+		desc = SM_DEATH_RULE_NORMAL_DESC
+	}
+	option = {
+		name = high
+		text = SM_DEATH_RULE_HIGH
+		desc = SM_DEATH_RULE_HIGH_DESC
+	}
+	option = {
+		name = insane
+		text = SM_DEATH_RULE_INSANE
+		desc = SM_DEATH_RULE_INSANE_DESC
+	}
+	option = {
+		name = low
+		text = SM_DEATH_RULE_LOW
+		desc = SM_DEATH_RULE_LOW_DESC
+	}
+	option = {
+		name = off
+		text = SM_DEATH_RULE_OFF
+		desc = SM_DEATH_RULE_OFF_DESC
+	}
+}

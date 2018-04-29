@@ -1,0 +1,7 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+pillage_all;Pillage All Holdings;;;;;;;;;;;;;x
+pillage_all_desc;Any pillagable holdings you own will be pillaged;;;;;;;;;;;;;x
+SM_PILLAGE_ALL_CONDITION;A holding you own can be pillaged;;;;;;;;;;;;;x
+pillage_war;Pillage Captured Holdings;;;;;;;;;;;;;x
+pillage_war_desc;Any pillagable holdings you have seiged in the war will be pillaged;;;;;;;;;;;;;x
+SM_PILLAGE_WAR_CONDITION;A holding has been captured by you in the war that can be pillaged;;;;;;;;;;;;;x

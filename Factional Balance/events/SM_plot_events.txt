@@ -1,0 +1,35 @@
+namespace = SMFaction
+
+# Inform faction backer rejected - increase council power
+letter_event = {
+	id = SMFaction.8216
+	desc = "SMFaction.8216.desc"
+	
+	show_from_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "SMFaction.8216.opt"
+		
+		# Reduce opinion of liege
+		opinion = {
+			modifier = opinion_unhappy
+			who = FROM
+			years = 5
+		}
+		
+		# Faction leader happy
+		reverse_opinion = {
+			modifier = opinion_grateful
+			who = FROMFROM
+			years = 5
+		}
+		
+		add_character_modifier = {
+			name = faction_council_power_ultimatum_timer
+			hidden = yes
+			duration = 730
+		}
+	}
+}

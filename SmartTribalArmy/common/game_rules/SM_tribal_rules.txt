@@ -1,0 +1,39 @@
+#
+# List of options showing in the Game Rules screen
+#
+# format is:
+# rule_token = {
+#	name = "TEXT_KEY_FOR_NAME"
+#	desc = "TEXT_KEY_FOR_LONG_DESC"
+#	option = {										# please note that the first option is always the default option
+#		name = option_token
+#		text = "TEXT_KEY_FOR_OPTION_NAME"
+#		achievements = no							# by default achievements = yes, allows or disallows achievements
+#	}
+# }
+# 
+
+smart_tribal = {
+	name = "SM_SMART_TRIBAL_RULE"
+	#desc = "SM_SMART_TRIBAL_DESC"
+	option = {
+		name = smart_default
+		text = SM_SMART_DEFAULT
+		desc = SM_SMART_DEFAULT_DESC
+	}
+	option = {
+		name = smart_balanced
+		text = SM_SMART_BALANCED
+		desc = SM_SMART_BALANCED_DESC
+	}
+	option = {
+		name = smart_crazy
+		text = SM_SMART_CRAZY
+		desc = SM_SMART_CRAZY_DESC
+	}
+	option = {
+		name = smart_off
+		text = SM_SMART_OFF
+		desc = SM_SMART_OFF_DESC
+	}
+}

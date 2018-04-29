@@ -1,0 +1,137 @@
+namespace = SMDeath
+
+# Out of cash, forced out into exile by the wealthy
+character_event = {
+	id = SMDeath.1
+	desc = EVTDESCSMDeath.1
+
+	only_rulers = yes
+
+	trigger = {
+		NOT = { wealth = 1 }
+		NOT = { has_game_rule = { name = death_rule value = off} }
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 60
+			has_game_rule = { name = death_rule value = insane }
+		}
+		modifier = {
+			factor = 12
+			has_game_rule = { name = death_rule value = high }
+		}
+		modifier = {
+			factor = 0.33
+			has_game_rule = { name = death_rule value = low }
+		}
+	}
+	
+	option = {
+		name = EVTOPTSMDeath.1
+		death = { death_reason = death_vanished killer = ROOT }
+	}
+}
+
+# No Prestige, Killed by the mob
+character_event = {
+	id = SMDeath.2
+	desc = EVTDESCSMDeath.2
+
+	only_rulers = yes
+
+	trigger = {
+		NOT = { prestige = 1 }
+		NOT = { has_game_rule = { name = death_rule value = off} }
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 60
+			has_game_rule = { name = death_rule value = insane }
+		}
+		modifier = {
+			factor = 12
+			has_game_rule = { name = death_rule value = high }
+		}
+		modifier = {
+			factor = 0.33
+			has_game_rule = { name = death_rule value = low }
+		}
+	}
+	
+	option = {
+		name = EVTOPTSMDeath.2
+		death = { death_reason = death_rabble killer = ROOT }
+	}
+}
+
+# No Piety, Killed by the church
+character_event = {
+	id = SMDeath.3
+	desc = EVTDESCSMDeath.3
+
+	only_rulers = yes
+
+	trigger = {
+		NOT = { piety = 1 }
+		NOT = { has_game_rule = { name = death_rule value = off} }
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 60
+			has_game_rule = { name = death_rule value = insane }
+		}
+		modifier = {
+			factor = 12
+			has_game_rule = { name = death_rule value = high }
+		}
+		modifier = {
+			factor = 0.33
+			has_game_rule = { name = death_rule value = low }
+		}
+	}
+	
+	option = {
+		name = EVTOPTSMDeath.3
+		death = { death_reason = death_execution_burning killer = ROOT }
+	}
+}
+
+# Random death events
+character_event = {
+	id = SMDeath.4
+	desc = EVTDESCSMDeath.4
+	
+	only_playable = yes
+	
+	trigger = {
+		NOT = { has_game_rule = { name = death_rule value = off} }
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 60
+			has_game_rule = { name = death_rule value = insane }
+		}
+		modifier = {
+			factor = 12
+			has_game_rule = { name = death_rule value = high }
+		}
+		modifier = {
+			factor = 0.33
+			has_game_rule = { name = death_rule value = low }
+		}
+	}
+	
+	option = {
+		name = EVTOPTSMDeath.4
+		death = { death_reason = death_murder_arrow killer = ROOT }
+	}
+}
+

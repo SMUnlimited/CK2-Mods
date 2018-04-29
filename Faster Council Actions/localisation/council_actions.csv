@@ -1,0 +1,13 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+SM_COUNCIL_SPEED_RULE;Faster Council Actions;;;;;;;;;;;;;x
+SM_COUNCIL_SPEED_DESC;Configure how fast council actions take to run;;;;;;;;;;;;;x
+SM_COUNCIL_DEFAULT;Default;;;;;;;;;;;;;x
+SM_COUNCIL_DEFAULT_DESC;Default behaviour, actions can take roughly between 1-15 years to fire;;;;;;;;;;;;;x
+SM_COUNCIL_FABRICATE;Fabricate Only;;;;;;;;;;;;;x
+SM_COUNCIL_FABRICATE_DESC;Only fabricate claims will be faster on neighbouring enemy provinces and those within the realm;;;;;;;;;;;;;x
+SM_COUNCIL_VANILLA;Vanilla;;;;;;;;;;;;;x
+SM_COUNCIL_VANILLA_DESC;Sets all council actions back to vanilla speeds;;;;;;;;;;;;;x
+fund_councillor_desc;Fund [Root.GetTitledFirstName] to temporarily improve performance at the current job;;;;;;;;;;;;;x
+fund_councillor;Provide Job Funds;;;;;;;;;;;;;x
+fund_councillor_money;Have enough money to fund the councillor for his skill level. Lower skill councillors require more money.;;;;;;;;;;;;;x
+fund_councillor_notfunded;Not already funded;;;;;;;;;;;;;x

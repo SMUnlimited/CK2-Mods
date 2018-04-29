@@ -1,0 +1,20 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+SM_DEATH_RULE;Death Rates;;;;;;;;;;;;;x
+SM_DEATH_RULE_NORMAL;Normal;;;;;;;;;;;;;x
+SM_DEATH_RULE_NORMAL_DESC;Chance of death every year;;;;;;;;;;;;;x
+SM_DEATH_RULE_LOW;Less Death;;;;;;;;;;;;;x
+SM_DEATH_RULE_LOW_DESC;Small chance for death every 5 years. ;;;;;;;;;;;;;x
+SM_DEATH_RULE_HIGH;More Death;;;;;;;;;;;;;x
+SM_DEATH_RULE_HIGH_DESC;More chances for death every month;;;;;;;;;;;;;x
+SM_DEATH_RULE_OFF;Off;;;;;;;;;;;;;x
+SM_DEATH_RULE_OFF_DESC;Disables the additional death events;;;;;;;;;;;;;x
+SM_DEATH_RULE_INSANE;Insane Death;;;;;;;;;;;;;x
+SM_DEATH_RULE_INSANE_DESC;People will die at a ridiculous rate;;;;;;;;;;;;;x
+EVTDESCSMDeath.1;The rich have find out about your money issues. They force you into exile to ensure you never return;;;;;;;;;;;;;x
+EVTDESCSMDeath.2;The peasants have grown particular disgruntled with your rule. They force themselves into your palace and kill you where you stand;;;;;;;;;;;;;x
+EVTDESCSMDeath.3;The church increasingly worried by your heathen ways, secretly organise a coup and burn you alive;;;;;;;;;;;;;x
+EVTDESCSMDeath.4;During a training event, a stray arrow hits you in the chest. You die on the spot;;;;;;;;;;;;;x
+EVTOPTSMDeath.1;But I...;;;;;;;;;;;;;x
+EVTOPTSMDeath.2;Darn Peasants!;;;;;;;;;;;;;x
+EVTOPTSMDeath.3;It burns!;;;;;;;;;;;;;x
+EVTOPTSMDeath.4;Ow!;;;;;;;;;;;;;x

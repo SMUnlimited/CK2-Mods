@@ -1,0 +1,33 @@
+#
+# List of options showing in the Game Rules screen
+#
+# format is:
+# rule_token = {
+#	name = "TEXT_KEY_FOR_NAME"
+#	desc = "TEXT_KEY_FOR_LONG_DESC"
+#	option = {										# please note that the first option is always the default option
+#		name = option_token
+#		text = "TEXT_KEY_FOR_OPTION_NAME"
+#		achievements = no							# by default achievements = yes, allows or disallows achievements
+#	}
+# }
+
+council_speed = {
+	name = "SM_COUNCIL_SPEED_RULE"
+	#desc = "SM_COUNCIL_SPEED_DESC"
+	option = {
+		name = council_default
+		text = SM_COUNCIL_DEFAULT
+		desc = SM_COUNCIL_DEFAULT_DESC
+	}
+	option = {
+		name = council_fabricate
+		text = SM_COUNCIL_FABRICATE
+		desc = SM_COUNCIL_FABRICATE_DESC
+	}
+	option = {
+		name = council_vanilla
+		text = SM_COUNCIL_VANILLA
+		desc = SM_COUNCIL_VANILLA_DESC
+	}
+}

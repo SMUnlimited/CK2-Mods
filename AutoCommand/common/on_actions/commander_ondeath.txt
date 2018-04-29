@@ -1,0 +1,6 @@
+
+on_death = {
+	events = {
+		SMCommand.1 
+	}
+}

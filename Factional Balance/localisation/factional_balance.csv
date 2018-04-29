@@ -1,0 +1,5 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+SM.8129DESCRefusal;Your shameful attempt to sway me on this matter has not succeeded. The council already has all the power it deserves.\n\nSigned,\n[From.GetTitledName];;;;;;;;;;;;;x
+SM.8129DESCOpt;That is dissapointing.;;;;;;;;;;;;x
+SMFaction.8216.desc;[From.GetTitledName] has unfortunately declined to give the [Root.GetCouncilName] more powers in deciding the policies of the realm. But your valuable support in this matter will not be forgotten.\n\nSincerely,\n[FromFrom.GetTitledName];;;;;;;;;;;;;x
+SMFaction.8216.opt;That is dissapointing.;;;;;;;;;;;;x
