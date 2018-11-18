@@ -161,6 +161,7 @@ character_event = {
 	min_age = 16
 	capable_only = yes
 	prisoner = no
+	has_job_title = yes
 	
 	trigger = {
 		has_job_action = action_advance_mil_tech
@@ -201,6 +202,10 @@ character_event = {
 				has_focus = focus_scholarship
 				liege = { has_focus = focus_scholarship }
 			}
+		}
+		modifier = {
+			factor = 2
+			has_religion_feature = religion_dogmatic
 		}
 		modifier = {
 			factor = 1.25
@@ -354,6 +359,7 @@ character_event = {
 	min_age = 16
 	capable_only = yes
 	prisoner = no
+	has_job_title = yes
 	
 	trigger = {
 		has_job_action = action_train_troops
@@ -474,6 +480,7 @@ character_event = {
 	min_age = 16
 	capable_only = yes
 	prisoner = no
+	has_job_title = yes
 	
 	trigger = {
 		has_job_action = action_train_troops
@@ -647,6 +654,7 @@ character_event = {
 	min_age = 16
 	capable_only = yes
 	prisoner = no
+	has_job_title = yes
 	
 	trigger = {
 		has_job_action = action_organize_raid
@@ -682,11 +690,19 @@ character_event = {
 			factor = 0.05
 			has_character_flag = job_funded
 		}
-		
+
 		modifier = {
 			factor = 3.0
 			liege = {
 				tier = count
+			}
+		}
+		modifier = {
+			factor = 0.75
+			liege = {
+				any_owned_bloodline = {
+					has_bloodline_flag = more_raiders_bloodline
+				}
 			}
 		}
 		
@@ -753,51 +769,118 @@ character_event = {
 	
 	immediate = {
 		capital_scope = {
-			ROOT = {
-				spawn_unit = {
-					province = PREV
-					home = PREV
-					owner = THIS
-					#leader = none
-					match_character = THIS
-					match_mult = 0.025
-					match_min = 100
-					match_max = 3000
-					attrition = 1.0
-					cannot_inherit = yes
-					earmark = tribal_organize_raid
-					is_looter = yes
-					can_toggle_looting = no
+			if = { 
+				limit = {
+					ROOT = { 
+						NOT = {
+							any_owned_bloodline = {
+								has_bloodline_flag = more_raiders_bloodline
+							}
+						}
+					}
 				}
-				spawn_unit = {
-					province = PREV
-					home = PREV
-					owner = THIS
-					#leader = none
-					match_character = THIS
-					match_mult = 0.025
-					match_min = 100
-					match_max = 3000
-					attrition = 1.0
-					cannot_inherit = yes
-					earmark = tribal_organize_raid
-					is_looter = yes
-					can_toggle_looting = no
+				ROOT = {
+					spawn_unit = {
+						province = PREV
+						home = PREV
+						owner = THIS
+						#leader = none
+						match_character = THIS
+						match_mult = 0.025
+						match_min = 100
+						match_max = 3000
+						attrition = 1.0
+						cannot_inherit = yes
+						earmark = tribal_organize_raid
+						is_looter = yes
+						can_toggle_looting = no
+					}
+					spawn_unit = {
+						province = PREV
+						home = PREV
+						owner = THIS
+						#leader = none
+						match_character = THIS
+						match_mult = 0.025
+						match_min = 100
+						match_max = 3000
+						attrition = 1.0
+						cannot_inherit = yes
+						earmark = tribal_organize_raid
+						is_looter = yes
+						can_toggle_looting = no
+					}
+					spawn_unit = {
+						province = PREV
+						home = PREV
+						owner = THIS
+						#leader = none
+						match_character = THIS
+						match_mult = 0.025
+						match_min = 100
+						match_max = 3000
+						attrition = 1.0
+						cannot_inherit = yes
+						earmark = tribal_organize_raid
+						is_looter = yes
+						can_toggle_looting = no
+					}
 				}
-				spawn_unit = {
-					province = PREV
-					home = PREV
-					owner = THIS
-					#leader = none
-					match_character = THIS
-					match_mult = 0.025
-					match_min = 100
-					match_max = 3000
-					attrition = 1.0
-					cannot_inherit = yes
-					earmark = tribal_organize_raid
-					is_looter = yes
-					can_toggle_looting = no
+			}
+			if = { 
+				limit = {
+					ROOT = { 
+						any_owned_bloodline = {
+							has_bloodline_flag = more_raiders_bloodline
+						}
+					}
+				}
+				ROOT = {
+					spawn_unit = {
+						province = PREV
+						home = PREV
+						owner = THIS
+						#leader = none
+						match_character = THIS
+						match_mult = 0.03
+						match_min = 250
+						match_max = 5000
+						attrition = 1.0
+						cannot_inherit = yes
+						earmark = tribal_organize_raid
+						is_looter = yes
+						can_toggle_looting = no
+					}
+					spawn_unit = {
+						province = PREV
+						home = PREV
+						owner = THIS
+						#leader = none
+						match_character = THIS
+						match_mult = 0.03
+						match_min = 250
+						match_max = 5000
+						attrition = 1.0
+						cannot_inherit = yes
+						earmark = tribal_organize_raid
+						is_looter = yes
+						can_toggle_looting = no
+					}
+					spawn_unit = {
+						province = PREV
+						home = PREV
+						owner = THIS
+						#leader = none
+						match_character = THIS
+						match_mult = 0.03
+						match_min = 250
+						match_max = 5000
+						attrition = 1.0
+						cannot_inherit = yes
+						earmark = tribal_organize_raid
+						is_looter = yes
+						can_toggle_looting = no
+					}
 				}
 			}
 		}
@@ -815,6 +898,23 @@ character_event = {
 			modifier = opinion_grateful
 			months = 60
 		}
+				ROOT = {
+					spawn_unit = {
+						province = PREV
+						home = PREV
+						owner = THIS
+						#leader = none
+						match_character = THIS
+						match_mult = 0.025
+						match_min = 100
+						match_max = 3000
+						attrition = 1.0
+						cannot_inherit = yes
+						earmark = tribal_organize_raid
+						is_looter = yes
+						can_toggle_looting = no
+					}
+					}
 	}
 }
 

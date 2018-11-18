@@ -33,6 +33,7 @@ character_event = {
 	min_age = 16
 	capable_only = yes
 	prisoner = no
+	has_job_title = yes
 	
 	trigger = {
 		has_job_action = action_uncover_plots
@@ -278,6 +279,7 @@ character_event = {
 	min_age = 16
 	capable_only = yes
 	prisoner = no
+	has_job_title = yes
 	
 	trigger = {
 		OR = {
@@ -502,6 +504,7 @@ character_event = {
 	min_age = 16
 	capable_only = yes
 	prisoner = no
+	has_job_title = yes
 	
 	trigger = {
 		OR = {
@@ -1245,6 +1248,7 @@ character_event = {
 	min_age = 16
 	capable_only = yes
 	prisoner = no
+	has_job_title = yes
 	
 	trigger = {
 		OR = {
@@ -1801,6 +1805,7 @@ character_event = {
 	min_age = 16
 	capable_only = yes
 	prisoner = no
+	has_job_title = yes
 	
 	trigger = {
 		has_job_action = action_study_technology
@@ -1830,6 +1835,10 @@ character_event = {
 				has_focus = focus_scholarship
 				liege = { has_focus = focus_scholarship }
 			}
+		}
+		modifier = {
+			factor = 2
+			has_religion_feature = religion_dogmatic
 		}
 		modifier = {
 			factor = 1.25
@@ -1917,6 +1926,7 @@ character_event = {
 	min_age = 16
 	capable_only = yes
 	prisoner = no
+	has_job_title = yes
 	
 	trigger = {
 		OR = {
@@ -2103,6 +2113,7 @@ character_event = {
 	min_age = 16
 	capable_only = yes
 	prisoner = no
+	has_job_title = yes
 	
 	trigger = {
 		has_job_action = action_organize_spies
@@ -2115,12 +2126,7 @@ character_event = {
 				NOT = { character = ROOT }
 				ROOT = {
 					liege = {
-						OR = {
-							PREVPREV = {
-								NOT = { opinion = { who = PREV value = 0 } }
-							}
-							NOT = { opinion = { who = PREVPREV value = 0 } }
-						}
+						NOT = { opinion = { who = PREVPREV value = 0 } }
 					}
 				}
 				trait = homosexual
@@ -2186,12 +2192,7 @@ character_event = {
 						NOT = { character = ROOT }
 						ROOT = {
 							liege = {
-								OR = {
-									PREVPREV = {
-										NOT = { opinion = { who = PREV value = 0 } }
-									}
-									NOT = { opinion = { who = PREVPREV value = 0 } }
-								}
+								NOT = { opinion = { who = PREVPREV value = 0 } }
 							}
 						}
 						trait = homosexual
@@ -2686,6 +2687,7 @@ character_event = {
 	min_age = 16
 	capable_only = yes
 	prisoner = no
+	has_job_title = yes
 	
 	trigger = {
 		has_job_action = action_organize_spies

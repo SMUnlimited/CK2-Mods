@@ -48,6 +48,8 @@ Temporary Items
 *.dat
 unins000.exe
 *.dll
+
+#Third Party Mods
 Please report bugs here.url
 wtwsms.zip
 vassalculturespread.zip
@@ -71,3 +73,12 @@ nap_friends.mod.mod
 no_dynastic_names.mod
 reduced model size.mod.mod
 *.bak
+CK2Plus/
+childhood.mod.mod
+CK2Plus.mod
+CK2PlusReadme.txt
+ek021.mod.mod
+exclave_independence.mod.mod
+knights.mod.mod
+the_great_trade_league.mod.mod
+totp.mod.mod
