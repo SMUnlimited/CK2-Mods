@@ -1,5 +1,8 @@
 	name="Faster Council Actions"
 	path="mod/Faster Council Actions"
-	tags={Gameplay}
+	tags=
+	{
+		Gameplay 
+	}
 	picture="fastfabricate.jpg"
 }

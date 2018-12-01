@@ -14,7 +14,7 @@
 
 sm_horde_size = {
 	name = "SM_HORDE_SIZE_RULE"
-	#desc = "SM_HORDE_SIZE_DESC"
+	group = "SM_RANDOM_HORDES"
 	option = {
 		name = horde_default
 		text = SM_HORDE_SIZE_DEFAULT
@@ -27,9 +27,24 @@ sm_horde_size = {
 	}
 }
 
+sm_horde_delay = {
+	name = "SM_HORDE_DELAY_RULE"
+	group = "SM_RANDOM_HORDES"
+	option = {
+		name = horde_delay
+		text = SM_HORDE_DELAY
+		desc = SM_HORDE_DELAY_DESC
+	}
+	option = {
+		name = horde_nodelay
+		text = SM_HORDE_NODELAY
+		desc = SM_HORDE_NODELAY_DESC
+	}
+}
+
 sm_horde_freq = {
 	name = "SM_HORDE_FREQ_RULE"
-	#desc = "SM_HORDE_FREQ_DESC"
+	group = "SM_RANDOM_HORDES"
 	option = {
 		name = horde_default
 		text = SM_HORDE_FREQ_DEFAULT

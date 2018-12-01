@@ -55,15 +55,16 @@ dejure_independence = {
 council_form_faction = {
 	name = "SM_COUNCIL_FORM_FACTION"
 	group = "RULE_GROUP_FACTIONAL_BALANCE"
-	option = {
-		name = off
-		text = SM_COUNCIL_FORM_FACTION_OFF
-		desc = SM_COUNCIL_FORM_FACTION_OFF_DESC
-	}
+	dlc = "Conclave"
 	option = {
 		name = on
 		text = SM_COUNCIL_FORM_FACTION_ON
 		desc = SM_COUNCIL_FORM_FACTION_ON_DESC
+	}
+	option = {
+		name = off
+		text = SM_COUNCIL_FORM_FACTION_OFF
+		desc = SM_COUNCIL_FORM_FACTION_OFF_DESC
 	}
 }
 

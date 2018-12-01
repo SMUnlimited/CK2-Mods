@@ -1,5 +1,8 @@
 	name="Factional Rebalance"
 	path="mod/Factional Rebalance"
-	tags={Gameplay}
+	tags=
+	{
+		Gameplay 
+	}
 	picture="rebalance.png"
 }

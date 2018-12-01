@@ -13,6 +13,7 @@ character_event = {
 	title = SM.20.title
 	desc = SM.20.desc
 	is_triggered_only = yes
+	picture = GFX_evt_battle
 	
 	only_playable = yes
 	
@@ -72,6 +73,7 @@ character_event = {
 	#major = yes
 	hide_window = yes
 	is_triggered_only = yes
+	picture = GFX_evt_battle
 	
 	trigger = {
 		OR = {
@@ -144,6 +146,7 @@ character_event = {
 # Event to schedule the horde spawning
 character_event = {
 	id = SM.4
+	picture = GFX_evt_battle
 
 	ai = yes
 	only_rulers = yes
@@ -172,18 +175,14 @@ character_event = {
 					any_demesne_title = {
 						count = 5
 					}
-					any_realm_lord = {
-						count = 3
-					}
-					#num_of_vassals = 3
 				}
 			}
 		}
 		OR = {
 			total_years_played = 10 # Dont spawn hordes at game start
 			has_game_rule = {
-				  name = sm_horde_freq
-				  value = horde_insane
+				  name = sm_horde_delay
+				  value = horde_nodelay
 			}
 		}
 		NOT = {
@@ -193,10 +192,6 @@ character_event = {
 				  value = horde_off
 			}
 		}
-		#OR = {
-			#any_demesne_title = { has_de_jure_pretension = ROOT }
-			#has_horde_culture = no
-		#}
 	}
 	
 	mean_time_to_happen = {

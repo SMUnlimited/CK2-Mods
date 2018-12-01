@@ -1,7 +1,8 @@
-	name="Pillage All"
+	name="Pillage All Holdings"
 	path="mod/PillageAll"
 	tags=
 	{
-Pillage Utility 	}
+		Pillage Utility 
+	}
 	picture="pillage.jpg"
 }

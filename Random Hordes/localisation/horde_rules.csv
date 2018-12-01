@@ -14,6 +14,12 @@ SM_HORDE_FREQ_SLOW_DESC;Spawn rate of 1% every 25 years, and a minimum of 50 yea
 SM_HORDE_FREQ_FAST;High;;;;;;;;;;;;;x
 SM_HORDE_FREQ_FAST_DESC;Spawn rate of 9% every 8 years, and a minimum of 50 years between spawns;;;;;;;;;;;;;x
 SM_HORDE_FREQ_INSANE;Insane;;;;;;;;;;;;;x
-SM_HORDE_FREQ_INSANE_DESC;Spawn rate of 15% every 5 years, and a minimum of 10 years between spawns. Can also spawn when game is started;;;;;;;;;;;;;x
+SM_HORDE_FREQ_INSANE_DESC;Spawn rate of 15% every 5 years, and a minimum of 10 years between spawns;;;;;;;;;;;;;x
 SM_HORDE_FREQ_OFF;Off;;;;;;;;;;;;;x
 SM_HORDE_FREQ_OFF_DESC;Disables random horde spawning;;;;;;;;;;;;;x
+SM_HORDE_DELAY_RULE;Random Horde Start Delay;;;;;;;;;;;;;x
+SM_HORDE_DELAY;Delayed
+SM_HORDE_NODELAY;Immediate
+SM_HORDE_DELAY_DESC;Random hordes will not spawn until 10 years into the game;;;;;;;;;;;;;x
+SM_HORDE_NODELAY_DESC;Random hordes can spawn at game start;;;;;;;;;;;;;x
+SM_RANDOM_HORDES;Random Hordes;;;;;;;;;;;;;x

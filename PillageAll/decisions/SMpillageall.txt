@@ -2,282 +2,33 @@
 
 decisions = {
 
-	pillage_war = {
-		is_high_prio = yes 
-		potential = {
-			is_nomadic = yes
-			has_dlc = "Horse Lords"
-			war = yes
-			ai = no
-		}
-		allow = {
-			custom_tooltip = {
-				text = SM_PILLAGE_WAR_CONDITION
-				any_war = {
-					OR = {
-						AND = {
-							any_attacker = {
-								character = ROOT
-							}
-							any_defender = {
-								any_realm_province = {
-									NOT = { has_province_modifier = recently_burnt_the_land }
-									NOT = { has_province_modifier = recently_burnt_the_land_not_owner }
-									any_province_holding = {
-										has_siege = no
-										controlled_by = ROOT
-										NOT = { holding_type = nomad }
-										NOT = {
-											owner = { 
-												character = ROOT
-											}
-										}
-										num_of_buildings = 4
-										OR = {
-											ROOT = {
-												independent = yes
-											}
-											custom_tooltip = { 
-												text = TT_NOT_SAME_REALM
-												hidden_tooltip = {
-													ROOT = {
-														top_liege = {
-															PREVPREV = {
-																holder_scope = {
-																	top_liege = {
-																		NOT = { character = PREVPREVPREV }
-																	}
-																} 
-															}
-														}
-													}
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-						AND = {
-							any_defender = {
-								character = ROOT
-							}
-							any_attacker = {
-								any_realm_province = {
-									NOT = { has_province_modifier = recently_burnt_the_land }
-									NOT = { has_province_modifier = recently_burnt_the_land_not_owner }
-									any_province_holding = {
-										has_siege = no
-										controlled_by = ROOT
-										NOT = { holding_type = nomad }
-										NOT = {
-											owner = { 
-												character = ROOT
-											}
-										}
-										num_of_buildings = 4
-										OR = {
-											ROOT = {
-												independent = yes
-											}
-											custom_tooltip = { 
-												text = TT_NOT_SAME_REALM
-												hidden_tooltip = {
-													ROOT = {
-														top_liege = {
-															PREVPREV = {
-																holder_scope = {
-																	top_liege = {
-																		NOT = { character = PREVPREVPREV }
-																	}
-																} 
-															}
-														}
-													}
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-		effect = {
-			any_war = {
-				limit = {
-					any_attacker = {
-						character = ROOT
-					}
-				}
-				any_defender = {
-					any_realm_province = {
-						limit = {
-							NOT = { has_province_modifier = recently_burnt_the_land }
-							NOT = { has_province_modifier = recently_burnt_the_land_not_owner }
-						}
-						random_province_holding = {
-							limit = {
-								has_siege = no
-								controlled_by = ROOT
-								NOT = { holding_type = nomad }
-								NOT = {
-									owner = { 
-										character = ROOT
-									}
-								}
-								num_of_buildings = 4
-								OR = {
-									ROOT = {
-										independent = yes
-									}
-									custom_tooltip = { 
-										text = TT_NOT_SAME_REALM
-										hidden_tooltip = {
-											ROOT = {
-												top_liege = {
-													PREVPREV = {
-														holder_scope = {
-															top_liege = {
-																NOT = { character = PREVPREVPREV }
-															}
-														} 
-													}
-												}
-											}
-										}
-									}
-								}
-							}
-							if = {
-								limit = { NOT = { holding_type = tribal } }
-								ROOT = {
-									wealth = 10
-									random_list = {
-										10 = { military_techpoints = 5 }
-										10 = { economy_techpoints = 5 }
-										10 = { culture_techpoints = 5 }
-									}
-								}
-							}
-							if = {
-								limit = { holding_type = tribal }
-								ROOT = {
-									wealth = 5
-								}
-							}
-							custom_tooltip = {
-								text = "PILLAGE_DESTROY_BUILDINGS"
-								hidden_tooltip = {
-									destroy_random_building = THIS
-								}
-							}
-							PREV = {
-								add_province_modifier = {
-									modifier = recently_burnt_the_land_not_owner
-									years = 10
-								}
-							}
-						}
-					}
-				}
-			}
-			any_war = {
-				limit = {
-					any_defender = {
-						character = ROOT
-					}
-				}
-				any_attacker = {
-					any_realm_province = {
-						limit = {
-							NOT = { has_province_modifier = recently_burnt_the_land }
-							NOT = { has_province_modifier = recently_burnt_the_land_not_owner }
-						}
-						random_province_holding = {
-							limit = {
-								has_siege = no
-								controlled_by = ROOT
-								NOT = { holding_type = nomad }
-								NOT = {
-									owner = { 
-										character = ROOT
-									}
-								}
-								num_of_buildings = 4
-								OR = {
-									ROOT = {
-										independent = yes
-									}
-									custom_tooltip = { 
-										text = TT_NOT_SAME_REALM
-										hidden_tooltip = {
-											ROOT = {
-												top_liege = {
-													PREVPREV = {
-														holder_scope = {
-															top_liege = {
-																NOT = { character = PREVPREVPREV }
-															}
-														} 
-													}
-												}
-											}
-										}
-									}
-								}
-							}
-							if = {
-								limit = { NOT = { holding_type = tribal } }
-								ROOT = {
-									wealth = 10
-									random_list = {
-										10 = { military_techpoints = 5 }
-										10 = { economy_techpoints = 5 }
-										10 = { culture_techpoints = 5 }
-									}
-								}
-							}
-							if = {
-								limit = { holding_type = tribal }
-								ROOT = {
-									wealth = 5
-								}
-							}
-							custom_tooltip = {
-								text = "PILLAGE_DESTROY_BUILDINGS"
-								hidden_tooltip = {
-									destroy_random_building = THIS
-								}
-							}
-							PREV = {
-								add_province_modifier = {
-									modifier = recently_burnt_the_land_not_owner
-									years = 10
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-		revoke_allowed = {
-			always = no #Not used in vanilla
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-
 	pillage_all = {
 	  is_high_prio = yes # Will show an alert once decision is enabled
+	  only_independent = yes
 	  potential = {
 		#Conditions for the decision to appear
-		is_nomadic = yes
+		OR = {
+			is_nomadic = yes
+			is_tribal = yes
+		}
 		has_dlc = "Horse Lords"
 		ai = no
+		any_realm_province = {
+			any_province_holding = {
+				NOT = { holding_type = nomad }
+				OR = {
+					NOT = { holding_type = tribal }
+					ROOT = { is_tribal = no }
+				}
+				OR = {
+					ROOT = { is_nomadic = yes }
+					location = {
+						num_of_settlements = 2
+					}
+				}
+				owner = { character = ROOT }
+			}
+		}
 	  }
 	  allow = {
 			independent = yes
@@ -285,75 +36,208 @@ decisions = {
 				text = SM_PILLAGE_ALL_CONDITION
 				hidden_tooltip = {
 					any_realm_province = {
-						any_province_holding = {
-							owner = { 
-								character = ROOT
-							}
-							has_siege = no
+						any_province_holding = {	
+							#Potential
 							NOT = { holding_type = nomad }
-							controlled_by = ROOT
+							OR = {
+								NOT = { holding_type = tribal }
+								ROOT = { is_tribal = no }
+							}
+							OR = {
+								ROOT = { is_nomadic = yes }
+								location = {
+									num_of_settlements = 2
+								}
+							}
+							owner = { character = ROOT }
+							#Allow
+							NOT = { has_holding_modifier = recently_burnt_the_land }
+							owner = { independent = yes }
+							has_siege = no
+							custom_tooltip = {
+								text = stop_pillaging_custom_tooltip
+								hidden_tooltip = {
+									NOT = { has_holding_modifier = stop_burning_land }
+								}
+							}
 						}
-						NOT = { has_province_modifier = recently_burnt_the_land }
 					}
 				}
 			}
 	  }
 	  effect = {
 			any_realm_province = {
-				limit = {
-					NOT = { has_province_modifier = recently_burnt_the_land }
-				}
-				random_province_holding = {
+				any_province_holding = {
 					limit = {
-						has_siege = no
-						controlled_by = ROOT
-						owner = { 
-							character = ROOT
-						}
+						#Potential
 						NOT = { holding_type = nomad }
+						OR = {
+							NOT = { holding_type = tribal }
+							ROOT = { is_tribal = no }
+						}
+						OR = {
+							ROOT = { is_nomadic = yes }
+							location = {
+								num_of_settlements = 2
+							}
+						}
+						owner = { character = ROOT }
+						
+						#Allow
+						NOT = { has_holding_modifier = recently_burnt_the_land }
+						owner = { independent = yes }
+						has_siege = no
+						custom_tooltip = {
+							text = stop_pillaging_custom_tooltip
+							hidden_tooltip = {
+								NOT = { has_holding_modifier = stop_burning_land }
+							}
+						}
 					}
+					hidden_tooltip = {
+						location = { save_event_target_as = nickname_target }
+						ROOT = { save_event_target_as = nickname_receiver }
+						if = {
+							limit = {
+								owner = { 
+									has_nickname = no
+									is_adult = yes
+									NOT = { trait = incapable }
+								}
+							}
+							random_list = {
+								5 = {
+									owner = { give_nickname = nick_the_destroyer }
+								}
+								5 = {
+									owner = { give_nickname = nick_the_scourge_of_god }
+									modifier = {
+										factor = 0
+										event_target:nickname_target = { religion = ROOT }
+									}
+								}
+								5 = {
+									owner = { give_nickname = nick_the_slayer_of_culture }
+									modifier = {
+										factor = 0
+										event_target:nickname_target = { culture = ROOT }
+									}
+								}
+								5 = {
+									owner = { give_nickname = nick_the_terror_of_provincename }
+								}
+								5 = {
+									owner = { give_nickname = nick_the_culture_marauder }
+									modifier = {
+										factor = 0
+										event_target:nickname_target = { culture = ROOT }
+									}
+								}
+								75 = {}
+							}
+						}
+					}
+					
 					if = {
 						limit = { NOT = { holding_type = tribal } }
 						ROOT = {
 							wealth = 50
-							random_list = {
-								10 = { military_techpoints = 5 }
-								10 = { economy_techpoints = 5 }
-								10 = { culture_techpoints = 5 }
+						}
+						custom_tooltip = {
+							text = gain_tech_custom_tooltip
+							hidden_tooltip = {
+								ROOT = {
+									random_list = {
+										10 = { military_techpoints = 5 }
+										10 = { economy_techpoints = 5 }
+										10 = { culture_techpoints = 5 }
+									}
+								}
 							}
 						}
 					}
 					if = {
 						limit = { holding_type = tribal }
-						ROOT = {
-							wealth = 25
+						ROOT = { 
+							wealth = 25 
+							population = 150 
 						}
 					}
+					
 					custom_tooltip = {
 						text = "PILLAGE_DESTROY_BUILDINGS"
 						hidden_tooltip = {
 							destroy_random_building = THIS
 							destroy_random_building = THIS
+							add_holding_modifier = {
+								modifier = recently_burnt_the_land
+								months = 7
+							}
 						}
 					}
+					
+					hidden_tooltip = {
+					
+						location = {
+							add_province_modifier = {
+								modifier = rampaging_nomads
+								years = 10
+							}
+						}
+
+						location = {
+							add_province_modifier = {
+								modifier = burnt_the_land
+								years = 10
+							}
+						}
+					
+						if = {
+							limit = {
+								OR = {
+									ROOT = { 
+										NOT = { has_character_modifier = pillage_cooldown } 
+									}
+									ROOT = {
+										NOT = {
+											any_realm_province = {
+												any_province_holding = {
+													owner = { character = ROOT }
+													has_holding_modifier = recently_burnt_the_land
+													NOT = { has_holding_modifier = stop_burning_land }
+												}
+											}
+										}
+									}
+								}
+							}
+							ROOT = { character_event = { id = HL.4800 days = 180 } }
+							ROOT = {
+								add_character_modifier = {
+									modifier = pillage_cooldown
+									hidden = yes
+									months = 6
+								}
+							}
+						}
+					}
+					
 					if = {
 						limit = {
 							NOT = { has_any_building = yes }
+							owner = {
+								character = ROOT
+							}
+						}
+						hidden_tooltip = {
+							location = {
+								province_event = { id = HL.4810 days = 1 }
+								province_event = { id = HL.4814 days = 2 random = 2 }
+							}
 						}
 						destroy_settlement = THIS
-					}
-					PREV = {
-						add_province_modifier = {
-							modifier = burnt_the_land
-							years = 8
-							stacking = yes
-						}
-						add_province_modifier = {
-							modifier = recently_burnt_the_land
-							months = 6
-						}
-					}
-				}			
+					}					
+				}
 			}
 	  }
 	  revoke_allowed = {

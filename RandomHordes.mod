@@ -2,6 +2,7 @@
 	path="mod/Random Hordes"
 	tags=
 	{
-Gameplay Horde 	}
+		Gameplay Horde 
+	}
 	picture="horde.jpg"
 }
